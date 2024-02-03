@@ -8,7 +8,11 @@ export default createStore({
       { name: "Ken", email: "ken@amazon.com", age: 29 },
     ],
   },
-  getters: {},
+  getters: {
+    users: function (state) {
+      return state.users.filter((user) => user.age < 30)
+    },
+  },
   mutations: {},
   actions: {},
   modules: {},
