@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <UserList />
+    <p><button v-on:click="increment">UP</button></p>
+    <h1>Count:{{ count }}</h1>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import UserList from "@/components/UserList.vue"
 export default defineComponent({
   name: "app",
-  components: {
-    UserList,
+  methods: {
+    increment() {
+      this.$store.commit("increment")
+    },
+  },
+  computed: {
+    count() {
+      return this.$store.state.count
+    },
   },
 })
 </script>
