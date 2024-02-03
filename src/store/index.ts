@@ -6,8 +6,8 @@ export default createStore({
   },
   getters: {},
   mutations: {
-    increment: function (state) {
-      state.count++
+    increment: function (state, number) {
+      state.count = state.count + number
     },
   },
   actions: {},

@@ -11,7 +11,7 @@ export default defineComponent({
   name: "app",
   methods: {
     increment() {
-      this.$store.commit("increment")
+      this.$store.commit("increment", 10)
     },
   },
   computed: {
