@@ -6,10 +6,14 @@ export default createStore({
   },
   getters: {},
   mutations: {
-    increment: function (state, number) {
-      state.count = state.count + number
+    increment: function (state) {
+      state.count++
     },
   },
-  actions: {},
+  actions: {
+    incrementOne: function (context) {
+      context.commit("increment")
+    },
+  },
   modules: {},
 })
