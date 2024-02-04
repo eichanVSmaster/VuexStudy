@@ -12,7 +12,6 @@ export default defineComponent({
   methods: {
     increment() {
       this.$store.dispatch("incrementOne")
-      console.log("ok")
     },
   },
   computed: {
